@@ -1,0 +1,16 @@
+{
+  "name": "type-utils",
+  "description": "Utility types for TypeScript",
+  "license": "MIT",
+  "author": "Shuntaro Nishizawa <me@shun.technology> (https://github.com/shun-shobon)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "utility",
+    "types"
+  ]
+}
