@@ -28,9 +28,12 @@
   "module": "index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "format": "prettier -w \"**/*.ts\"",
+    "format:check": "prettier -c \"**/*.ts\""
   },
   "devDependencies": {
+    "prettier": "^2.2.1",
     "typescript": "^4.1.3"
   }
 }
