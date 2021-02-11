@@ -11,6 +11,12 @@
     "url": "https://github.com/shun-shobon/type-utils/issues"
   },
   "homepage": "https://github.com/shun-shobon/type-utils#readme",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "dist/"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
