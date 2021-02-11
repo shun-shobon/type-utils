@@ -29,6 +29,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "clean": "rimraf dist/",
     "format": "prettier -w \"**/*.ts\"",
     "format:check": "prettier -c \"**/*.ts\"",
     "postinstall": "husky install",
@@ -43,6 +44,7 @@
     "lint-staged": "^10.5.4",
     "pinst": "^2.1.4",
     "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
     "typescript": "^4.1.3"
   }
 }
