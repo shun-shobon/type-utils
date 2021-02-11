@@ -3,6 +3,14 @@
   "description": "Utility types for TypeScript",
   "license": "MIT",
   "author": "Shuntaro Nishizawa <me@shun.technology> (https://github.com/shun-shobon)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shun-shobon/type-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shun-shobon/type-utils/issues"
+  },
+  "homepage": "https://github.com/shun-shobon/type-utils#readme",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
