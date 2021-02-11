@@ -1,0 +1,48 @@
+name: ci
+on:
+  push:
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.15.4
+      - uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+      - uses: pnpm/action-setup@v1.2.1
+        with:
+          version: 5.16.0
+      - run: pnpm install
+
+      - name: Run format check
+        run: pnpm format:check
+
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - 10.23.2
+          - 12.20.1
+          - 14.15.4
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+      - uses: pnpm/action-setup@v1.2.1
+        with:
+          version: 5.16.0
+      - run: pnpm install
+
+      - name: Run build
+        run: pnpm build
